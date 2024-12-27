@@ -33,9 +33,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Set session variables
         $_SESSION['username'] = $user['username'];
         $_SESSION['user_id'] = $user['id'];
-        
-        // Redirect to homepage
-        header("Location: homepage.php");
+
+        // Show success message and back to home button
+        echo "
+        <html>
+        <head>
+            <title>Login Successful</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    text-align: center;
+                    padding: 50px;
+                }
+                .btn {
+                    display: inline-block;
+                    border: 1px solid black;
+                    padding: 15px 25px;
+                    background-color: green;
+                    color: white;
+                    font-size: 1.5rem;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+                .btn:hover {
+                    background-color: darkgreen;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>Login Successful!</h1>
+            <p>Welcome, $username</p>
+            <a href='index.html' class='btn'>Back to Home</a>
+        </body>
+        </html>";
         exit();
     } else {
         // Invalid credentials

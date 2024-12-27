@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
 
-    <link rel="stylesheet" href="./signup.css">
+    <link rel="stylesheet" href="css/signup.css">
     <!-- Iconscout Link  -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
-        <style>
+    <style>
         * {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -17,7 +17,6 @@
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: capitalize;
   transition: 0.2s linear;
 }
 html {
@@ -203,24 +202,24 @@ i {
         <div class="signup-box">
             <h1>Create an Account</h1>
             <form action="signup.php" method="POST">
-                <!-- Name -->
+                <!-- Full Name -->
                 <div class="input-field">
-                    
                     <input type="text" name="name" placeholder="Full Name" required>
+                </div>
+                <!-- Username -->
+                <div class="input-field">
+                    <input type="text" name="username" placeholder="Username" required>
                 </div>
                 <!-- Email -->
                 <div class="input-field">
-                    
                     <input type="email" name="email" placeholder="Email Address" required>
                 </div>
                 <!-- Password -->
                 <div class="input-field">
-                    
                     <input type="password" name="password" placeholder="Password" required>
                 </div>
                 <!-- Confirm Password -->
                 <div class="input-field">
-                    
                     <input type="password" name="confirm_password" placeholder="Confirm Password" required>
                 </div>
                 <!-- Submit Button -->
