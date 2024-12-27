@@ -508,6 +508,17 @@ form label:hover {
 }
 
 /* Destination Items */
+#population-dis{
+  text-align: center;
+  margin: 20px;
+}
+.mrgn{
+  margin:25px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+  padding: 20px;
+}
  #population-dis{
   font-size: 3rem;
   font-weight: 800;
