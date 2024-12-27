@@ -96,3 +96,8 @@ body {
 .extra-links a:hover {
     text-decoration: underline;
 }
+body{
+    background-image: url(../images/unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
