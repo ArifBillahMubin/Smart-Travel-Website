@@ -151,3 +151,8 @@ textarea {
     margin-top: 20px;
     font-size: 14px;
 }
+body{
+    background-image: url(../images/unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
