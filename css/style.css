@@ -62,6 +62,7 @@ section {
   color: black;
   font-weight: bolder;
 }
+
 .wrapper1 {
   margin-left: auto;
   margin-right: auto;
@@ -426,9 +427,9 @@ form label:hover {
       from(rgba(0, 0, 0, 0.5)),
       to(rgba(0, 0, 0, 0.5))
     ),
-    url(../images/footer-bg.jpg) no-repeat;
+    url(../images/unsplash.jpg) no-repeat;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../images/footer.jpg) no-repeat;
+    url(../images/unsplash.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -480,6 +481,96 @@ form label:hover {
 .footer .credit span {
   color: #219150;
 }
+/* population Distance    */
+/* Section Title */
+.popular-destinations {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.popular-destinations h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #4c8bf5;
+}
+
+/* Grid Layout */
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-gap: 15px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* Destination Items */
+ #population-dis{
+  font-size: 3rem;
+  font-weight: 800;
+  background-color: #bdbdbd8c;
+  border: 2px solid seagreen;
+  padding: 10px;
+  border-radius: 16px;
+  
+}
+.destination-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.destination-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.destination-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 5rem;
+  font-weight: bold;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  pointer-events: none; /* Disable interaction */
+
+  .destination-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+}
+
+.destination-item {
+    position: relative; /* Set relative position for image movement */
+    width: 200px; /* Fixed width for each image container */
+    height: 150px; /* Fixed height for each image container */
+    overflow: hidden; /* Ensure image stays within bounds */
+    margin: 10px;
+}
+
+.scroll-image {
+    position: absolute; /* Absolute positioning for smooth movement */
+    top: 0;
+    left: 0;
+    width: 100%; /* Image fills container width */
+    height: auto;
+    transition: transform 0.02s linear; /* Smooth movement */
+}
+
+.destination-title {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
 
 @media (max-width: 1200px) {
   .header {
