@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitakunda View Booking</title>
+    <link rel="stylesheet" href="css/from.css">
+</head>
+<body>
+    <!-- Booking Form Section -->
+    <section class="booking-form">
+        <h1 class="heading">Sitakunda View Booking</h1>
+        <form action="sitakunda_booking.php" method="POST">
+            <div class="form-group">
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full_name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="package">Select Package:</label>
+                <select id="package" name="package" required>
+                    <option value="">-- Choose a Package --</option>
+                    <option value="basic">Basic Package (৳ 4,000)</option>
+                    <option value="standard">Standard Package (৳ 6,000)</option>
+                    <option value="luxury">Luxury Package (৳ 8,000)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="preferred_date" required>
+            </div>
+            <div class="form-group">
+                <label for="special-requests">Special Requests (Optional):</label>
+                <textarea id="special-requests" name="special_requests" rows="4" placeholder="Enter any special requests here"></textarea>
+            </div>
+            <button type="submit" class="btn">Submit Booking</button>
+        </form>
+    </section>
+</body>
+</html>
