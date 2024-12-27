@@ -7,11 +7,28 @@
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
+
 <body>
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-hiking"></i> travel.com</a>
+        <nav class="navbar">
+            <div id="nav-close" class="fas fa-times"></div>
+            <a href="#home">home</a>
+            <a href="#category">Adventures</a>
+            <a href="#packages">packages</a>
+            <a href="#contact">contact</a>
+            <a href="login.html">login</a>
+        </nav>
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div> 
+            <div id="search-btn" class="fas fa-search"></div>
+          
+        </div>
+    </header>
     <div class="login-container">
         <div class="login-box">
             <h1>Login</h1>
-            <form id="loginForm" action="login_process.php" method="post">
+            <form id="loginForm" action="login.php" method="post">
                 <div class="input-field">
                     <i class="fas fa-user"></i>
                     <input type="text" id="username" name="username" placeholder="Username" required>
