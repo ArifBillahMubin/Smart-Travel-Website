@@ -8,8 +8,197 @@
     <link rel="stylesheet" href="./signup.css">
     <!-- Iconscout Link  -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+        <style>
+        * {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+section {
+  padding: 5rem 9%;
+}
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  border: 0.2rem solid black;
+  color: black;
+  cursor: pointer;
+  background: none;
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+  border-radius: 40px;
+}
+.btn:hover {
+  background: black;
+  color: white;
+}
+.heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 4rem;
+  color: #10221b;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 9%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+.header.active {
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.header .logo {
+  margin-right: auto;
+  font-size: 2.5rem;
+  color: black;
+  font-weight: bolder;
+}
+
+.wrapper1 {
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 550px;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.wrapper1 .title1 h1 {
+  color: green;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 3.5rem;
+}
+
+.contact-form {
+  display: flex;
+}
+
+.uil {
+  height: 50px;
+  width: 50px;
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4%;
+}
+
+.input-fields,
+.msg {
+  width: 60%;
+}
+
+.input-fields .input,
+.msg textarea {
+  margin: 10px 0;
+  background: transparent;
+  border: 0px;
+  border-bottom: 2px solid #5f66618f;
+  padding: 10px;
+  color: black;
+  width: 100%;
+}
+
+.msg textarea {
+  height: 189px;
+}
+.msg .btn1 {
+  margin-top: 1rem;
+  display: inline-block;
+  border: 0.2rem solid green;
+  color: black;
+  cursor: pointer;
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+  border-radius: 40px;
+  background: none;
+}
+.btn1 button[type="submit"] {
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+i {
+  color: green;
+}
+        /*-------------- NavBar updated------------- */
+.header .navbar a {
+  color: #0a0a0a;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin: 0 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.header .navbar a:hover {
+  background-color: #ff6347;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.header .navbar #nav-close {
+  font-size: 5rem;
+  cursor: pointer;
+  color: black;
+  display: none;
+}
+.header .icons a,
+.header .icons div {
+  font-size: 2.5rem;
+  margin-left: 2rem;
+  cursor: pointer;
+  color: black;
+}
+
+.header.icons a:hover,
+.header.icons div:hover {
+  color: green;
+}
+.header #menu-btn {
+  display: none;
+}
+    </style>
 </head>
 <body>
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-hiking"></i> travel.com</a>
+        <nav class="navbar">
+            <div id="nav-close" class="fas fa-times"></div>
+            <a href="index.html">home</a>
+            <a href="#category">Adventures</a>
+            <a href="#packages">packages</a>
+            <a href="#contact">contact</a>
+            <a href="login.html">login</a>
+        </nav>
+    </header>
     <div class="signup-container">
         <div class="signup-box">
             <h1>Create an Account</h1>
