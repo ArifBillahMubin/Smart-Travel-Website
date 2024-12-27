@@ -26,7 +26,39 @@ $sql = "INSERT INTO sitakunda_bookings (full_name, email, phone, package, prefer
         VALUES ('$full_name', '$email', '$phone', '$package', '$preferred_date', '$special_requests')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Booking submitted successfully!";
+    // Success message and button to go back to home
+    echo "
+    <html>
+    <head>
+        <title>Booking Success</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                padding: 50px;
+            }
+            .btn {
+                display: inline-block;
+                border: none;
+                padding: 15px 25px;
+                background-color: blue;
+                color: white;
+                font-size: 1.5rem;
+                text-decoration: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .btn:hover {
+                background-color: darkblue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Booking Successfully Submitted!</h1>
+        <p>Thank you for choosing our service. We will contact you soon with further details.</p>
+        <a href='index.html' class='btn'>Back to Home</a>
+    </body>
+    </html>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
