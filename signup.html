@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+
+    <link rel="stylesheet" href="signup.css">
+    <!-- Iconscout Link  -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-box">
+            <h1>Create an Account</h1>
+            <form action="signup.php" method="POST">
+                <!-- Name -->
+                <div class="input-field">
+                    
+                    <input type="text" name="name" placeholder="Full Name" required>
+                </div>
+                <!-- Email -->
+                <div class="input-field">
+                    
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+                <!-- Password -->
+                <div class="input-field">
+                    
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <!-- Confirm Password -->
+                <div class="input-field">
+                    
+                    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                </div>
+                <!-- Submit Button -->
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+            <!-- Redirect to login -->
+            <div class="extra-links">
+                <p>Already have an account? <a href="login.html">Login here</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
