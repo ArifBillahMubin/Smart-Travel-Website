@@ -1,11 +1,11 @@
 <?php
-// Database connection variables
-$servername = "localhost"; // Your server name
-$username = "root"; // Your database username
-$password = ""; // Your database password
-$dbname = "tour"; // Replace with your actual database name
+// Database connection details
+$servername = "localhost"; // Replace with your server name
+$username = "root"; // Replace with your database username
+$password = ""; // Replace with your database password
+$dbname = "tour"; // Replace with your database name
 
-// Create a connection
+// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
@@ -23,20 +23,58 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $preferred_date = $_POST['preferred_date'];
     $special_requests = $_POST['special_requests'];
 
-    // Insert data into the database
-    $sql = "INSERT INTO coxsbazar_booking (full_name, email, phone, package, preferred_date, special_requests)
-            VALUES (?, ?, ?, ?, ?, ?)";
+    // Check if the email exists in the user table
+    $emailCheckQuery = "SELECT * FROM users WHERE email = '$email'";
+    $result = $conn->query($emailCheckQuery);
 
-    // Use prepared statements for security
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssssss", $full_name, $email, $phone, $package, $preferred_date, $special_requests);
+    if ($result->num_rows > 0) {
+        // If email exists, insert data into coxsbazar_bookings table
+        $sql = "INSERT INTO coxsbazar_booking (full_name, email, phone, package, preferred_date, special_requests) 
+                VALUES ('$full_name', '$email', '$phone', '$package', '$preferred_date', '$special_requests')";
 
-    if ($stmt->execute()) {
-        // Success message with "Back to Home" button
+        if ($conn->query($sql) === TRUE) {
+            // Success message and "Back to Home" button
+            echo "
+            <html>
+            <head>
+                <title>Booking Success</title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        text-align: center;
+                        padding: 50px;
+                    }
+                    .btn {
+                        display: inline-block;
+                        border: none;
+                        padding: 15px 25px;
+                        background-color: green;
+                        color: white;
+                        font-size: 1.5rem;
+                        text-decoration: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+                    .btn:hover {
+                        background-color: darkgreen;
+                    }
+                </style>
+            </head>
+            <body>
+                <h1>Booking Successfully Submitted!</h1>
+                <p>Thank you for booking your trip to Cox's Bazar with us. We will contact you shortly with further details.</p>
+                <a href='index.html' class='btn'>Back to Home</a>
+            </body>
+            </html>";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+    } else {
+        // If email does not exist, display a message and redirect to signup page
         echo "
         <html>
         <head>
-            <title>Booking Success</title>
+            <title>Signup Required</title>
             <style>
                 body {
                     font-family: Arial, sans-serif;
@@ -47,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     display: inline-block;
                     border: none;
                     padding: 15px 25px;
-                    background-color: #007BFF;
+                    background-color: red;
                     color: white;
                     font-size: 1.5rem;
                     text-decoration: none;
@@ -55,22 +93,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     cursor: pointer;
                 }
                 .btn:hover {
-                    background-color: #0056b3;
+                    background-color: darkred;
                 }
             </style>
         </head>
         <body>
-            <h1>Booking Successfully Submitted!</h1>
-            <p>Thank you for booking your trip to Cox’s Bazar with us. We will contact you soon with further details.</p>
-            <a href='index.html' class='btn'>Back to Home</a>
+            <h1>Login Required</h1>
+            <p>You are not logged in yet. Please login to proceed with the booking.</p>
+            <a href='login.html' class='btn'>Go to Login Page</a>
         </body>
         </html>";
-    } else {
-        echo "Error: " . $stmt->error;
     }
 
-    // Close the prepared statement and connection
-    $stmt->close();
+    // Close connection
     $conn->close();
 }
 ?>
