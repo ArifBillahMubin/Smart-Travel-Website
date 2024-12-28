@@ -63,6 +63,21 @@ section {
   font-weight: bolder;
 }
 
+.content-1{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin-right: 600px;
+  margin-top: 70px;
+  
+
+}
+.text{
+ margin-top: 80px;
+  margin-left: 100px;
+}
+
+
+
 .wrapper1 {
   margin-left: auto;
   margin-right: auto;
