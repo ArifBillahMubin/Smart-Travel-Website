@@ -1,7 +1,7 @@
-# 🌍 Travel Tour Website ✈️🏝️
+# 🌍 Smart Travel Website ✈️🏝️
 
 ## 📌 Project Overview
-The **Travel Tour Website** is a web-based platform that allows users to easily find, plan, and book travel packages. The website provides a seamless experience for travelers to explore various tour packages based on their interests, budget, and destination preferences. 🏕️🏔️
+The **Smart Travel Website** is a web-based platform that allows users to easily find, plan, and book travel packages. The website provides a seamless experience for travelers to explore various tour packages based on their interests, budget, and destination preferences. 🏕️🏔️
 
 ## ✨ Features
 - 🔐 **User Registration & Login**: Secure authentication system for users.  
