@@ -49,5 +49,3 @@ The project includes three main database tables:
 🔗 **GitHub**: [ArifBillahMubin](https://github.com/ArifBillahMubin)  
 
 ---
-
-This README now has a more engaging and professional look! Let me know if you want any more tweaks! 🚀🎉
