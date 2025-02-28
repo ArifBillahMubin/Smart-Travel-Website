@@ -37,7 +37,7 @@ The project includes three main database tables:
 - 📢 **Real-time travel updates** and notifications.  
 - 🎯 **Personalized recommendations** based on user interests.  
 - 💰 **Dynamic pricing system** based on demand and availability.
-- - 🌎 **International Travel Planning**: Expand the platform to offer **international** tour packages, including flight bookings, visa information, and multi-country itineraries.  
+- 🌎 **International Travel Planning**: Expand the platform to offer **international** tour packages, including flight bookings, visa information, and multi-country itineraries.  
 
 ## 🌐 Live Project & Repository
 - **GitHub Repository**: [🔗 GitHub Link](https://arifbillahmubin.github.io/tour-and-travels/)  
